@@ -1,0 +1,6 @@
+baseURL = "https://rjourney.pages.dev/"
+languageCode = "en-us"
+title = "R Journey | Building Bright Futures Together"
+
+[params]
+  description = "Supporting individuals with autism and special needs"
