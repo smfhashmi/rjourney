@@ -791,9 +791,75 @@
         max-width: 280px;
       }
     }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 18px 28px;
+      border-radius: 14px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-label {
+      white-space: nowrap;
+    }
+
+    .impact-icon-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 32px 20px;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .impact-icon-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .impact-icon {
+      font-size: 2.8rem;
+      color: #ffd500;
+      margin-bottom: 15px;
+    }
+
+    .impact-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: 0.4px;
+    }
   </style>
 
 </head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z72NP0M9FZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z72NP0M9FZ');
+</script>
 
 <body>
   
@@ -821,7 +887,8 @@
           </a>
         </li>
         <li class="nav-item ms-lg-3">
-          <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn btn-donate-nav">
+          <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn btn-donate-nav"
+           onclick="trackDonate('navbar')">
             <i class="bi bi-heart-fill"></i> Donate
           </a>
         </li>
@@ -851,11 +918,12 @@
       </p>
 
       <div class="hero-cta-group slide-up animate-delay-2">
-        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-hero">
+        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-hero"
+        onclick="trackDonate('hero')">
           <i class="bi bi-heart-fill"></i>
           Donate Now
         </a>
-        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal" onclick="trackDonate('hero')">
           <i class="bi bi-qr-code"></i>
           Scan QR Code
         </button>
@@ -863,15 +931,12 @@
 
       <div class="hero-stats slide-up animate-delay-3">
         <div class="stat-item">
-          <span class="stat-number">500+</span>
           <span class="stat-label">Families Supported</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">50+</span>
           <span class="stat-label">Programs Offered</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">10+</span>
           <span class="stat-label">Years of Impact</span>
         </div>
       </div>
@@ -891,7 +956,7 @@
           <h2 class="section-title">Our Mission</h2>
           <p class="section-text">
             R Journey is a nonprofit organization dedicated to supporting individuals
-            with special needs, including those on the autism spectrum, and their families.
+            with special needs, especially those with Autism Spectrum Disorder, and their families.
             We provide charitable, educational, and community-based services that promote
             independence, inclusion, and lifelong growth.
           </p>
@@ -970,31 +1035,35 @@
     </div>
 
     <div class="row g-4">
-      <div class="col-md-3 fade-in">
-        <div class="impact-card">
-          <span class="impact-number">500+</span>
-          <p class="impact-text">Families Served</p>
-        </div>
-      </div>
-      <div class="col-md-3 fade-in animate-delay-1">
-        <div class="impact-card">
-          <span class="impact-number">1,200+</span>
-          <p class="impact-text">Program Hours</p>
-        </div>
-      </div>
-      <div class="col-md-3 fade-in animate-delay-2">
-        <div class="impact-card">
-          <span class="impact-number">98%</span>
-          <p class="impact-text">Satisfaction Rate</p>
-        </div>
-      </div>
-      <div class="col-md-3 fade-in animate-delay-3">
-        <div class="impact-card">
-          <span class="impact-number">50+</span>
-          <p class="impact-text">Community Partners</p>
-        </div>
-      </div>
+  <div class="col-md-3 fade-in">
+    <div class="impact-card impact-icon-card">
+      <i class="bi bi-people-fill impact-icon"></i>
+      <p class="impact-text">Families Served</p>
     </div>
+  </div>
+
+  <div class="col-md-3 fade-in animate-delay-1">
+    <div class="impact-card impact-icon-card">
+      <i class="bi bi-clock-history impact-icon"></i>
+      <p class="impact-text">Program Hours</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 fade-in animate-delay-2">
+    <div class="impact-card impact-icon-card">
+      <i class="bi bi-heart-fill impact-icon"></i>
+      <p class="impact-text">Community Trust</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 fade-in animate-delay-3">
+    <div class="impact-card impact-icon-card">
+      <i class="bi bi-people impact-icon"></i>
+      <p class="impact-text">Community Partners</p>
+    </div>
+  </div>
+    </div>
+
   </div>
 </section>
 
@@ -1009,12 +1078,14 @@
       </p>
 
       <div class="cta-buttons fade-in animate-delay-2">
-        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-cta">
+        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-cta"
+        onclick="trackDonate('cta')">
           <i class="bi bi-heart-fill"></i>
           Donate Now
         </a>
 
-        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal"
+        onclick="trackDonate('cta')">
           <i class="bi bi-qr-code"></i>
           Scan QR Code
         </button>
@@ -1092,11 +1163,37 @@
       <p>
         © 2026 R Journey. All rights reserved.
       </p>
+      <p>
+        Developed and managed by
+        <a href="https://two44software.com" target="_blank">
+          Two44 Software Solutions
+        </a>
+      </p>
     </div>
   </div>
 </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  function trackDonate(location) {
+    if (typeof gtag === "function") {
+      gtag("event", "donate_click", {
+        event_category: "donation",
+        event_label: location
+      });
+    }
+  }
+
+  function trackScanQR(location) {
+    if (typeof gtag === "function") {
+      gtag("event", "scan_qr_click", {
+        event_category: "donation",
+        event_label: location
+      });
+    }
+  }
+</script>
+
 </body>
 </html>
