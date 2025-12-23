@@ -1,0 +1,19 @@
+<script>
+  function trackDonate(location) {
+    if (typeof gtag === "function") {
+      gtag("event", "donate_click", {
+        event_category: "donation",
+        event_label: location
+      });
+    }
+  }
+
+  function trackScanQR(location) {
+    if (typeof gtag === "function") {
+      gtag("event", "scan_qr_click", {
+        event_category: "donation",
+        event_label: location
+      });
+    }
+  }
+</script>

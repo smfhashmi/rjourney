@@ -19,11 +19,12 @@
       </p>
 
       <div class="hero-cta-group slide-up animate-delay-2">
-        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-hero">
+        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-hero"
+        onclick="trackDonate('hero')">
           <i class="bi bi-heart-fill"></i>
           Donate Now
         </a>
-        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal" onclick="trackDonate('hero')">
           <i class="bi bi-qr-code"></i>
           Scan QR Code
         </button>
@@ -177,12 +178,14 @@
       </p>
 
       <div class="cta-buttons fade-in animate-delay-2">
-        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-cta">
+        <a href="https://link.clover.com/urlshortener/FQCNzr" target="_blank" class="btn-donate-cta"
+        onclick="trackDonate('cta')">
           <i class="bi bi-heart-fill"></i>
           Donate Now
         </a>
 
-        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+        <button type="button" class="btn-qr" data-bs-toggle="modal" data-bs-target="#qrModal"
+        onclick="trackDonate('cta')">
           <i class="bi bi-qr-code"></i>
           Scan QR Code
         </button>
