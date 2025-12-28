@@ -1,0 +1,188 @@
+{{ define "main" }}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          {{ if .Params.categories }}
+          {{ range first 1 .Params.categories }}
+          <li class="breadcrumb-item"><a href="/categories/{{ . | urlize }}/">{{ . }}</a></li>
+          {{ end }}
+          {{ end }}
+          <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <article>
+        <header class="mb-4">
+          <h1 class="display-4 fw-bold mb-3">{{ .Title }}</h1>
+          {{ if .Params.description }}
+          <p class="lead text-muted">{{ .Params.description }}</p>
+          {{ end }}
+          <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+            {{ if .Date }}
+            <span><i class="bi bi-calendar3"></i> {{ .Date.Format "January 2, 2006" }}</span>
+            {{ end }}
+            {{ if .Params.categories }}
+            <span>
+              <i class="bi bi-folder"></i>
+              {{ range $index, $category := .Params.categories }}
+                {{ if $index }}, {{ end }}
+                <a href="/categories/{{ $category | urlize }}/" class="text-decoration-none">{{ $category }}</a>
+              {{ end }}
+            </span>
+            {{ end }}
+            {{ if .Params.tags }}
+            <span>
+              <i class="bi bi-tags"></i>
+              {{ range $index, $tag := .Params.tags }}
+                {{ if $index }}, {{ end }}
+                <a href="/tags/{{ $tag | urlize }}/" class="text-decoration-none">{{ $tag }}</a>
+              {{ end }}
+            </span>
+            {{ end }}
+          </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="article-content">
+          {{ .Content }}
+        </div>
+
+        <!-- Article Footer -->
+        <footer class="mt-5 pt-4 border-top">
+          <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+              {{ if .Params.categories }}
+              <div class="mb-2">
+                <strong><i class="bi bi-folder"></i> Categories:</strong>
+                {{ range $index, $category := .Params.categories }}
+                  {{ if $index }}, {{ end }}
+                  <a href="/categories/{{ $category | urlize }}/" class="text-decoration-none">{{ $category }}</a>
+                {{ end }}
+              </div>
+              {{ end }}
+              {{ if .Params.tags }}
+              <div>
+                <strong><i class="bi bi-tags"></i> Tags:</strong>
+                {{ range $index, $tag := .Params.tags }}
+                  {{ if $index }}, {{ end }}
+                  <a href="/tags/{{ $tag | urlize }}/" class="text-decoration-none">{{ $tag }}</a>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="/contact-us/" class="btn btn-primary">
+                <i class="bi bi-envelope"></i> Contact Us
+              </a>
+            </div>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Related Content -->
+      {{ $related := .Site.RegularPages.Related . | first 3 }}
+      {{ if $related }}
+      <div class="mt-5">
+        <h3 class="mb-4">Related Content</h3>
+        <div class="row g-4">
+          {{ range $related }}
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ .Permalink }}" class="text-decoration-none">{{ .Title }}</a>
+                </h5>
+                {{ if .Description }}
+                <p class="card-text text-muted small">{{ .Description | truncate 100 }}</p>
+                {{ end }}
+                <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<style>
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue, #0bb3f3);
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark-blue, #0a2540);
+}
+
+.article-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 2rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content a {
+  color: var(--primary-blue, #0bb3f3);
+  text-decoration: underline;
+}
+
+.article-content a:hover {
+  color: var(--secondary-blue, #0a5bd3);
+}
+
+.article-content strong {
+  font-weight: 600;
+  color: var(--dark-blue, #0a2540);
+}
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-blue, #0bb3f3);
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+</style>
+{{ end }}

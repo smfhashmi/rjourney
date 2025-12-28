@@ -1,6 +1,44 @@
-baseURL = "https://rjourney.pages.dev/"
+baseURL = "https://rjourney.org/"
 languageCode = "en-us"
 title = "R Journey | Building Bright Futures Together"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
 
 [params]
   description = "Supporting individuals with autism and special needs"
+  author = "R Journey"
+  keywords = ["autism support", "special needs", "autism spectrum disorder", "autism services", "special needs programs", "autism resources", "autism advocacy", "autism education", "autism community", "autism nonprofit"]
+  og_image = "/assets/logo.jpg"
+  twitter_card = "summary_large_image"
+  twitter_site = "@rjourney"
+  facebook_app_id = ""
+  google_site_verification = ""
+  bing_site_verification = ""
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    codeFences = true
+    lineNos = false
+    noClasses = false
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"

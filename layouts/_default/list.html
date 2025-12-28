@@ -1,0 +1,90 @@
+{{ define "main" }}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <header class="mb-5">
+        <h1 class="display-4 fw-bold mb-3">
+          {{ if eq .Kind "taxonomy" }}
+            {{ if eq .Data.Singular "category" }}
+              Category: {{ .Title }}
+            {{ else if eq .Data.Singular "tag" }}
+              Tag: {{ .Title }}
+            {{ else }}
+              {{ .Title }}
+            {{ end }}
+          {{ else }}
+            {{ .Title }}
+          {{ end }}
+        </h1>
+        {{ if .Description }}
+        <p class="lead text-muted">{{ .Description }}</p>
+        {{ end }}
+      </header>
+
+      {{ if .Content }}
+      <div class="mb-5">
+        {{ .Content }}
+      </div>
+      {{ end }}
+
+      {{ if .Pages }}
+      <div class="row g-4">
+        {{ range .Pages }}
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="{{ .Permalink }}" class="text-decoration-none">{{ .Title }}</a>
+              </h5>
+              {{ if .Description }}
+              <p class="card-text text-muted small">{{ .Description | truncate 120 }}</p>
+              {{ else if .Summary }}
+              <p class="card-text text-muted small">{{ .Summary | truncate 120 }}</p>
+              {{ end }}
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                {{ if .Params.categories }}
+                {{ range first 2 .Params.categories }}
+                <span class="badge bg-primary">{{ . }}</span>
+                {{ end }}
+                {{ end }}
+                {{ if .Params.tags }}
+                {{ range first 2 .Params.tags }}
+                <span class="badge bg-secondary">{{ . }}</span>
+                {{ end }}
+                {{ end }}
+              </div>
+              <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ else }}
+      <div class="alert alert-info">
+        <p class="mb-0">No content found in this section.</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<style>
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(11, 179, 243, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-title a {
+  color: var(--primary-blue, #0bb3f3);
+}
+
+.card-title a:hover {
+  color: var(--secondary-blue, #0a5bd3);
+}
+</style>
+{{ end }}

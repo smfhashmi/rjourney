@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on R Journey | Building Bright Futures Together</title>
+    <link>http://localhost:1313/tags/about/</link>
+    <description>Recent content in About on R Journey | Building Bright Futures Together</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Us - R Journey</title>
+      <link>http://localhost:1313/about-us/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about-us/</guid>
+      <description>&lt;h1 id=&#34;about-r-journey&#34;&gt;About R Journey&lt;/h1&gt;&#xA;&lt;p&gt;R Journey is a nonprofit organization dedicated to supporting individuals with special needs, including those on the autism spectrum, and their families. We provide charitable, educational, and community-based services that promote independence, inclusion, and lifelong growth.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;Our mission is to empower individuals with special needs to reach their full potential through comprehensive support services, educational programs, and community integration initiatives. We believe that every person deserves the opportunity to thrive and contribute meaningfully to their community.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
