@@ -234,3 +234,4 @@ Our transition services have helped individuals:
 ## Getting Started
 
 To learn more about our transition services or to begin transition planning, contact us at [info@rjourney.org](mailto:info@rjourney.org).
+

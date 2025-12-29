@@ -142,3 +142,4 @@ No matter what you need, we're here to support you on your journey. Don't hesita
 **Email:** [info@rjourney.org](mailto:info@rjourney.org)
 
 Thank you for reaching out to R Journey. Together, we're building bright futures!
+

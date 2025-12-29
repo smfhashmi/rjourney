@@ -119,3 +119,4 @@ Our educational programs have helped students:
 ## Getting Started
 
 To learn more about our educational programs or to schedule an assessment, contact us at [info@rjourney.org](mailto:info@rjourney.org).
+
