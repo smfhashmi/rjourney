@@ -100,10 +100,8 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ .Permalink }}"
-    },
-    {{ if .Params.categories }}
-    "articleSection": "{{ index .Params.categories 0 }}",
-    {{ end }}
+    }{{ if .Params.categories }},
+    "articleSection": "{{ index .Params.categories 0 }}"{{ end }}
     {{ else }}
     "name": "{{ .Site.Title }}",
     "description": "{{ .Site.Params.description }}",
