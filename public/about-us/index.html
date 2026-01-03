@@ -1053,68 +1053,139 @@
 </nav>
 
   
-<div class="container my-5">
-  <div class="row">
-    <div class="col-lg-8 mx-auto">
-      
-      <nav aria-label="breadcrumb" class="mb-4">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          
-          
-          <li class="breadcrumb-item"><a href="/categories/about/">About</a></li>
-          
-          
-          <li class="breadcrumb-item active" aria-current="page">About Us - R Journey</li>
-        </ol>
-      </nav>
 
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="readingProgress"></div>
+</div>
+
+
+<div class="article-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <nav aria-label="breadcrumb" class="article-breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a href="/"><i class="bi bi-house"></i> Home</a>
+            </li>
+            
+            
+            <li class="breadcrumb-item">
+              <a href="/categories/about/">About</a>
+            </li>
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">About Us - R Journey</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container article-content-wrapper">
+  <div class="row">
+    
+    <aside class="col-lg-3 d-none d-lg-block">
+      <div class="toc-sidebar" id="tocSidebar">
+        <div class="toc-header">
+          <i class="bi bi-list-ul"></i>
+          <span>Table of Contents</span>
+        </div>
+        <nav class="toc-nav" id="tableOfContents">
+          
+        </nav>
+      </div>
+    </aside>
+
+    
+    <div class="col-lg-8">
       
       <article>
-        <header class="mb-4">
-          <h1 class="display-4 fw-bold mb-3">About Us - R Journey</h1>
+        <header class="article-header">
+          <div class="article-header-top">
+            <h1 class="article-title">About Us - R Journey</h1>
+            <div class="article-actions">
+              <button class="article-action-btn" onclick="window.print()" title="Print">
+                <i class="bi bi-printer"></i>
+              </button>
+              <button class="article-action-btn" onclick="copyToClipboard()" title="Copy Link">
+                <i class="bi bi-link-45deg"></i>
+              </button>
+            </div>
+          </div>
           
-          <p class="lead text-muted">Learn about R Journey, a nonprofit organization dedicated to supporting individuals with autism and special needs. Discover our mission, vision, and commitment to building bright futures together.</p>
+          <p class="article-description">Learn about R Journey, a nonprofit organization dedicated to supporting individuals with autism and special needs. Discover our mission, vision, and commitment to building bright futures together.</p>
           
-          <div class="d-flex flex-wrap gap-3 text-muted small mb-4">
+          <div class="article-meta">
             
-            <span><i class="bi bi-calendar3"></i> January 15, 2024</span>
+            <div class="article-meta-item">
+              <i class="bi bi-calendar3"></i>
+              <span>January 15, 2024</span>
+            </div>
             
+            <div class="article-meta-item">
+              <i class="bi bi-clock"></i>
+              <span id="readingTime">Calculating...</span>
+            </div>
             
-            <span>
+            <div class="article-meta-item">
               <i class="bi bi-folder"></i>
               
                 
-                <a href="/categories/about/" class="text-decoration-none">About</a>
+                <a href="/categories/about/">About</a>
               
-            </span>
+            </div>
             
             
-            <span>
+            <div class="article-meta-item">
               <i class="bi bi-tags"></i>
               
                 
-                <a href="/tags/about/" class="text-decoration-none">about</a>
+                <a href="/tags/about/">about</a>
               
                 , 
-                <a href="/tags/mission/" class="text-decoration-none">mission</a>
+                <a href="/tags/mission/">mission</a>
               
                 , 
-                <a href="/tags/vision/" class="text-decoration-none">vision</a>
+                <a href="/tags/vision/">vision</a>
               
                 , 
-                <a href="/tags/nonprofit/" class="text-decoration-none">nonprofit</a>
+                <a href="/tags/nonprofit/">nonprofit</a>
               
                 , 
-                <a href="/tags/autism-support/" class="text-decoration-none">autism support</a>
+                <a href="/tags/autism-support/">autism support</a>
               
-            </span>
+            </div>
             
+          </div>
+
+          
+          <div class="article-share">
+            <span class="share-label">Share:</span>
+            <div class="share-buttons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fabout-us%2f" target="_blank" class="share-btn share-facebook" title="Share on Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=http%3a%2f%2flocalhost%3a1313%2fabout-us%2f&text=About%20Us%20-%20R%20Journey" target="_blank" class="share-btn share-twitter" title="Share on Twitter">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3a%2f%2flocalhost%3a1313%2fabout-us%2f" target="_blank" class="share-btn share-linkedin" title="Share on LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="mailto:?subject=About%20Us%20-%20R%20Journey&body=http%3a%2f%2flocalhost%3a1313%2fabout-us%2f" class="share-btn share-email" title="Share via Email">
+                <i class="bi bi-envelope"></i>
+              </a>
+              <button class="share-btn share-copy" onclick="copyToClipboard()" title="Copy Link">
+                <i class="bi bi-link-45deg"></i>
+              </button>
+            </div>
           </div>
         </header>
 
         
-        <div class="article-content">
+        <div class="article-content" id="articleContent">
           <h1 id="about-r-journey">About R Journey</h1>
 <p>R Journey is a nonprofit organization dedicated to supporting individuals with special needs, including those on the autism spectrum, and their families. We provide charitable, educational, and community-based services that promote independence, inclusion, and lifelong growth.</p>
 <h2 id="our-mission">Our Mission</h2>
@@ -1144,42 +1215,52 @@
         </div>
 
         
-        <footer class="mt-5 pt-4 border-top">
-          <div class="row">
-            <div class="col-md-6 mb-3 mb-md-0">
+        <div class="article-author-box">
+          <div class="author-avatar">
+            <i class="bi bi-building"></i>
+          </div>
+          <div class="author-info">
+            <h4>R Journey</h4>
+            <p>Building Bright Futures Together - Supporting individuals with special needs and their families through comprehensive programs and services.</p>
+            <a href="/about-us/" class="author-link">Learn More About Us <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        
+        <footer class="article-footer">
+          <div class="article-footer-content">
+            <div class="article-footer-tags">
               
-              <div class="mb-2">
-                <strong><i class="bi bi-folder"></i> Categories:</strong>
-                
+              <div class="footer-tag-group">
+                <span class="footer-tag-label"><i class="bi bi-folder"></i> Categories:</span>
+                <div class="footer-tag-list">
                   
-                  <a href="/categories/about/" class="text-decoration-none">About</a>
-                
+                  <a href="/categories/about/" class="footer-tag footer-tag-category">About</a>
+                  
+                </div>
               </div>
               
               
-              <div>
-                <strong><i class="bi bi-tags"></i> Tags:</strong>
-                
+              <div class="footer-tag-group">
+                <span class="footer-tag-label"><i class="bi bi-tags"></i> Tags:</span>
+                <div class="footer-tag-list">
                   
-                  <a href="/tags/about/" class="text-decoration-none">about</a>
-                
-                  , 
-                  <a href="/tags/mission/" class="text-decoration-none">mission</a>
-                
-                  , 
-                  <a href="/tags/vision/" class="text-decoration-none">vision</a>
-                
-                  , 
-                  <a href="/tags/nonprofit/" class="text-decoration-none">nonprofit</a>
-                
-                  , 
-                  <a href="/tags/autism-support/" class="text-decoration-none">autism support</a>
-                
+                  <a href="/tags/about/" class="footer-tag footer-tag-tag">about</a>
+                  
+                  <a href="/tags/mission/" class="footer-tag footer-tag-tag">mission</a>
+                  
+                  <a href="/tags/vision/" class="footer-tag footer-tag-tag">vision</a>
+                  
+                  <a href="/tags/nonprofit/" class="footer-tag footer-tag-tag">nonprofit</a>
+                  
+                  <a href="/tags/autism-support/" class="footer-tag footer-tag-tag">autism support</a>
+                  
+                </div>
               </div>
               
             </div>
-            <div class="col-md-6 text-md-end">
-              <a href="/contact-us/" class="btn btn-primary">
+            <div class="article-footer-cta">
+              <a href="/contact-us/" class="btn-article-cta">
                 <i class="bi bi-envelope"></i> Contact Us
               </a>
             </div>
@@ -1188,85 +1269,1210 @@
       </article>
 
       
+      <div class="article-navigation">
+        
+        
+        
+        <div class="article-nav-links">
+          
+          
+          <a href="http://localhost:1313/autism-support-programs/" class="article-nav-link article-nav-next">
+            <div class="nav-link-content">
+              <span class="nav-link-label">Next</span>
+              <span class="nav-link-title">Autism Support Programs - Comprehensive Services for Individuals and Families</span>
+            </div>
+            <div class="nav-link-icon">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+          
+        </div>
+        
+      </div>
+
+      
       
       
     </div>
   </div>
 </div>
 
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
 <style>
-.article-content {
+ 
+.reading-progress-container {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(11, 179, 243, 0.1);
+  z-index: 999;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-yellow));
+  width: 0%;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px rgba(11, 179, 243, 0.5);
+}
+
+ 
+.article-page-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 40px 0 30px;
+  margin-top: 76px;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80') center/cover;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+ 
+.article-breadcrumb {
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: '/';
+  color: rgba(255,255,255,0.6);
+  margin-left: 10px;
+}
+
+.breadcrumb-item a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--accent-yellow);
+}
+
+.breadcrumb-item.active {
+  color: white;
+  font-weight: 600;
+}
+
+ 
+.article-content-wrapper {
+  padding: 50px 0;
+  position: relative;
+}
+
+ 
+.toc-sidebar {
+  position: sticky;
+  top: 100px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  border: 2px solid var(--light-gray);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--light-gray);
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
+}
+
+.toc-header i {
+  color: var(--primary-blue);
+  font-size: 1.3rem;
+}
+
+.toc-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-nav li {
+  margin-bottom: 8px;
+}
+
+.toc-nav a {
+  display: block;
+  padding: 8px 12px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.toc-nav a:hover,
+.toc-nav a.active {
+  background: linear-gradient(135deg, rgba(11, 179, 243, 0.1), rgba(10, 91, 211, 0.1));
+  color: var(--primary-blue);
+  padding-left: 16px;
+  font-weight: 600;
+}
+
+.toc-nav .toc-level-2 {
+  padding-left: 20px;
+  font-size: 0.85rem;
+}
+
+.toc-nav .toc-level-3 {
+  padding-left: 35px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+ 
+.article-header {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid var(--light-gray);
+  position: relative;
+}
+
+.article-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.article-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.article-action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--light-gray);
+  background: white;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.article-action-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(11, 179, 243, 0.3);
+}
+
+ 
+.article-share {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 2px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.share-label {
+  font-weight: 600;
+  color: var(--dark-blue);
+  font-size: 0.95rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.share-facebook {
+  background: #1877f2;
+}
+
+.share-twitter {
+  background: #1da1f2;
+}
+
+.share-linkedin {
+  background: #0077b5;
+}
+
+.share-email {
+  background: var(--primary-blue);
+}
+
+.share-copy {
+  background: var(--dark-blue);
+}
+
+.share-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.article-header::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-yellow));
+}
+
+.article-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+  line-height: 1.2;
+}
+
+.article-description {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.article-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.article-meta-item i {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+}
+
+.article-meta-item a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.article-meta-item a:hover {
+  color: var(--secondary-blue);
+  text-decoration: underline;
+}
+
+ 
+.article-content {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 50px;
 }
 
 .article-content h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary-blue, #0bb3f3);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-blue);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--light-gray);
+  position: relative;
+}
+
+.article-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--accent-yellow);
 }
 
 .article-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--dark-blue, #0a2540);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
 }
 
 .article-content h4 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark-blue);
 }
 
 .article-content p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.article-content p:first-of-type::first-letter {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-right: 10px;
+  padding-top: 8px;
+  color: var(--primary-blue);
+  font-weight: 800;
+  font-family: Georgia, serif;
 }
 
 .article-content ul,
 .article-content ol {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.article-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content ul li {
+  position: relative;
   padding-left: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.article-content ol li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
 }
 
 .article-content li {
-  margin-bottom: 0.5rem;
+  line-height: 1.8;
 }
 
 .article-content a {
-  color: var(--primary-blue, #0bb3f3);
+  color: var(--primary-blue);
   text-decoration: underline;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .article-content a:hover {
-  color: var(--secondary-blue, #0a5bd3);
-}
-
-.article-content strong {
-  font-weight: 600;
-  color: var(--dark-blue, #0a2540);
-}
-
-.breadcrumb {
-  background-color: #f8f9fa;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.breadcrumb-item a {
-  color: var(--primary-blue, #0bb3f3);
+  color: var(--secondary-blue);
   text-decoration: none;
 }
 
-.breadcrumb-item a:hover {
-  text-decoration: underline;
+.article-content strong {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.article-content blockquote {
+  border-left: 5px solid var(--primary-blue);
+  padding: 25px 30px;
+  margin: 2.5rem 0;
+  font-style: italic;
+  color: #555;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 0 15px 15px 0;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.article-content blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 5rem;
+  color: var(--primary-blue);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.article-content blockquote p {
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+ 
+.article-content .callout {
+  padding: 25px 30px;
+  margin: 2rem 0;
+  border-radius: 15px;
+  border-left: 5px solid;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.article-content .callout-info {
+  background: linear-gradient(135deg, rgba(11, 179, 243, 0.1), rgba(10, 91, 211, 0.1));
+  border-color: var(--primary-blue);
+}
+
+.article-content .callout-warning {
+  background: linear-gradient(135deg, rgba(255, 213, 0, 0.15), rgba(255, 237, 78, 0.15));
+  border-color: var(--accent-yellow);
+}
+
+.article-content .callout-success {
+  background: linear-gradient(135deg, rgba(0, 166, 81, 0.1), rgba(0, 200, 100, 0.1));
+  border-color: var(--autism-green);
+}
+
+.article-content .callout::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.article-content code {
+  background: var(--light-gray);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--primary-blue);
+}
+
+.article-content pre {
+  background: var(--dark-blue);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.article-content pre code {
+  background: transparent;
+  color: white;
+  padding: 0;
+}
+
+ 
+.article-author-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 50px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 2px solid var(--light-gray);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.author-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(11, 179, 243, 0.3);
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-info h4 {
+  margin: 0 0 10px 0;
+  color: var(--dark-blue);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.author-info p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.author-link:hover {
+  color: var(--secondary-blue);
+  gap: 12px;
+}
+
+.author-link i {
+  transition: transform 0.3s ease;
+}
+
+.author-link:hover i {
+  transform: translateX(5px);
+}
+
+ 
+.article-navigation {
+  margin: 60px 0;
+  padding-top: 40px;
+  border-top: 3px solid var(--light-gray);
+}
+
+.article-nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.article-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  text-decoration: none;
+  border: 2px solid var(--light-gray);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.article-nav-link:hover {
+  border-color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(11, 179, 243, 0.2);
+}
+
+.article-nav-next {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.nav-link-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.nav-link-content {
+  flex: 1;
+}
+
+.nav-link-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.nav-link-title {
+  display: block;
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.article-nav-link:hover .nav-link-title {
+  color: var(--primary-blue);
+}
+
+ 
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 5px 20px rgba(11, 179, 243, 0.4);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 998;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(11, 179, 243, 0.6);
+}
+
+ 
+.article-footer {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 3px solid var(--light-gray);
+}
+
+.article-footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.article-footer-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-tag-label {
+  font-weight: 600;
+  color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-tag-label i {
+  color: var(--primary-blue);
+}
+
+.footer-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-tag {
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-tag-category {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+}
+
+.footer-tag-category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(11, 179, 243, 0.4);
+  color: white;
+}
+
+.footer-tag-tag {
+  background: linear-gradient(135deg, var(--accent-yellow), #ffed4e);
+  color: var(--dark-blue);
+}
+
+.footer-tag-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 213, 0, 0.4);
+  color: var(--dark-blue);
+}
+
+.article-footer-cta {
+  text-align: center;
+}
+
+.btn-article-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(11, 179, 243, 0.3);
+}
+
+.btn-article-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(11, 179, 243, 0.4);
+  color: white;
+}
+
+ 
+.related-content-section {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 3px solid var(--light-gray);
+}
+
+.related-content-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.related-content-header i {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.related-content-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.related-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(11, 179, 243, 0.2);
+  border-color: var(--primary-blue);
+}
+
+.related-card-icon {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+}
+
+.related-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.related-card-title a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.related-card-title a:hover {
+  color: var(--primary-blue);
+}
+
+.related-card-text {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.related-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.related-card-link:hover {
+  color: var(--secondary-blue);
+  gap: 12px;
+}
+
+.related-card-link i {
+  transition: transform 0.3s ease;
+}
+
+.related-card-link:hover i {
+  transform: translateX(5px);
+}
+
+ 
+@media (max-width: 768px) {
+  .article-title {
+    font-size: 2rem;
+  }
+
+  .article-description {
+    font-size: 1.1rem;
+  }
+
+  .article-content {
+    font-size: 1rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .article-footer-content {
+    text-align: center;
+  }
+
+  .footer-tag-group {
+    justify-content: center;
+  }
+
+  .related-content-header {
+    justify-content: center;
+  }
+
+  .article-header-top {
+    flex-direction: column;
+  }
+
+  .article-nav-links {
+    grid-template-columns: 1fr;
+  }
+
+  .toc-sidebar {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+  }
 }
 </style>
+
+<script>
+
+function updateReadingProgress() {
+  const article = document.getElementById('articleContent');
+  if (!article) return;
+
+  const articleTop = article.offsetTop;
+  const articleHeight = article.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  const progress = Math.min(
+    ((scrollTop + windowHeight - articleTop) / articleHeight) * 100,
+    100
+  );
+
+  document.getElementById('readingProgress').style.width = Math.max(0, progress) + '%';
+}
+
+
+function calculateReadingTime() {
+  const article = document.getElementById('articleContent');
+  if (!article) return;
+
+  const text = article.innerText || article.textContent;
+  const wordsPerMinute = 200;
+  const words = text.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+
+  const readingTimeEl = document.getElementById('readingTime');
+  if (readingTimeEl) {
+    readingTimeEl.textContent = `${minutes} min read`;
+  }
+}
+
+
+function generateTableOfContents() {
+  const article = document.getElementById('articleContent');
+  const tocNav = document.getElementById('tableOfContents');
+  if (!article || !tocNav) return;
+
+  const headings = article.querySelectorAll('h2, h3, h4');
+  if (headings.length === 0) {
+    document.getElementById('tocSidebar').style.display = 'none';
+    return;
+  }
+
+  let tocHTML = '<ul class="toc-nav">';
+  let currentLevel = 0;
+
+  headings.forEach((heading, index) => {
+    const level = parseInt(heading.tagName.charAt(1));
+    const id = `heading-${index}`;
+    heading.id = id;
+
+    if (level > currentLevel) {
+      currentLevel = level;
+    } else if (level < currentLevel) {
+      tocHTML += '</ul></li>';
+      currentLevel = level;
+    }
+
+    const levelClass = level === 2 ? 'toc-level-2' : level === 3 ? 'toc-level-3' : '';
+    tocHTML += `<li><a href="#${id}" class="${levelClass}">${heading.textContent}</a></li>`;
+  });
+
+  tocHTML += '</ul>';
+  tocNav.innerHTML = tocHTML;
+
+  
+  tocNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        const offsetTop = target.offsetTop - 100;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  
+  function updateActiveTOCItem() {
+    const scrollPos = window.pageYOffset + 150;
+    const headings = article.querySelectorAll('h2, h3, h4');
+
+    headings.forEach((heading, index) => {
+      const nextHeading = headings[index + 1];
+      const headingTop = heading.offsetTop;
+      const headingBottom = nextHeading ? nextHeading.offsetTop : article.offsetTop + article.offsetHeight;
+
+      if (scrollPos >= headingTop && scrollPos < headingBottom) {
+        tocNav.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+        const activeLink = tocNav.querySelector(`a[href="#heading-${index}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveTOCItem);
+  updateActiveTOCItem();
+}
+
+
+function copyToClipboard() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    
+    const toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.textContent = 'Link copied to clipboard!';
+    toast.style.cssText = `
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: var(--primary-blue);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      box-shadow: 0 5px 20px rgba(11, 179, 243, 0.4);
+      z-index: 9999;
+      animation: slideIn 0.3s ease;
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.animation = 'slideOut 0.3s ease';
+      setTimeout(() => toast.remove(), 300);
+    }, 2000);
+  });
+}
+
+
+function initBackToTop() {
+  const button = document.getElementById('backToTop');
+  if (!button) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      button.classList.add('visible');
+    } else {
+      button.classList.remove('visible');
+    }
+  });
+
+  button.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateReadingProgress();
+  calculateReadingTime();
+  generateTableOfContents();
+  initBackToTop();
+
+  window.addEventListener('scroll', updateReadingProgress);
+  window.addEventListener('resize', updateReadingProgress);
+});
+
+
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+`;
+document.head.appendChild(style);
+</script>
 
   <footer class="footer">
   <div class="container">

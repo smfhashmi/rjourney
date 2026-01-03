@@ -1021,49 +1021,73 @@
 </nav>
 
   
-<div class="container my-5">
+
+<div class="listing-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <header class="listing-header-content">
+          <div class="listing-header-icon">
+            
+              <i class="bi bi-file-earmark-text-fill"></i>
+            
+          </div>
+          <h1 class="listing-page-title">
+            
+              School Transitions
+            
+          </h1>
+          
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container listing-content-wrapper">
   <div class="row">
     <div class="col-lg-10 mx-auto">
-      <header class="mb-5">
-        <h1 class="display-4 fw-bold mb-3">
-          
-            School Transitions
-          
-        </h1>
-        
-      </header>
-
       
 
       
       <div class="row g-4">
         
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">
-                <a href="http://localhost:1313/transition-services/" class="text-decoration-none">Transition Services - Supporting Life Transitions at Every Stage</a>
+          <div class="listing-card">
+            <div class="listing-card-header">
+              <div class="listing-card-icon">
+                
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                
+              </div>
+              <div class="listing-card-gradient"></div>
+            </div>
+            <div class="listing-card-body">
+              <h5 class="listing-card-title">
+                <a href="http://localhost:1313/transition-services/">Transition Services - Supporting Life Transitions at Every Stage</a>
               </h5>
               
-              <p class="card-text text-muted small">R Journey&#39;s transition services support individuals with autism and special needs through major life transitions …</p>
+              <p class="listing-card-text">R Journey&#39;s transition services support individuals with autism and special needs through major life transitions …</p>
               
-              <div class="d-flex flex-wrap gap-2 mb-3">
+              <div class="listing-card-badges">
                 
                 
-                <span class="badge bg-primary">Programs</span>
+                <span class="listing-badge listing-badge-category">Programs</span>
                 
-                <span class="badge bg-primary">Support Services</span>
-                
-                
+                <span class="listing-badge listing-badge-category">Support Services</span>
                 
                 
-                <span class="badge bg-secondary">transitions</span>
                 
-                <span class="badge bg-secondary">life transitions</span>
+                
+                <span class="listing-badge listing-badge-tag">transitions</span>
+                
+                <span class="listing-badge listing-badge-tag">life transitions</span>
                 
                 
               </div>
-              <a href="http://localhost:1313/transition-services/" class="btn btn-sm btn-outline-primary">Read More</a>
+              <a href="http://localhost:1313/transition-services/" class="listing-card-link">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -1075,22 +1099,269 @@
 </div>
 
 <style>
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid rgba(11, 179, 243, 0.1);
+ 
+.listing-page-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 80px 0 60px;
+  margin-top: 76px;
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+.listing-page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80') center/cover;
+  opacity: 0.1;
+  z-index: 0;
 }
 
-.card-title a {
-  color: var(--primary-blue, #0bb3f3);
+.listing-header-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: white;
 }
 
-.card-title a:hover {
-  color: var(--secondary-blue, #0a5bd3);
+.listing-header-icon {
+  font-size: 4rem;
+  color: var(--accent-yellow);
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.listing-page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.listing-page-description {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+ 
+.listing-content-wrapper {
+  padding: 60px 0;
+}
+
+.listing-intro-content {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border-left: 5px solid var(--primary-blue);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+ 
+.listing-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(11, 179, 243, 0.25);
+  border-color: var(--primary-blue);
+}
+
+.listing-card-header {
+  position: relative;
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.listing-card-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.listing-card-icon {
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.listing-card-body {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.listing-card-title a {
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.listing-card-title a:hover {
+  color: var(--primary-blue);
+}
+
+.listing-card-text {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.listing-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.listing-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.listing-badge-category {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+}
+
+.listing-badge-tag {
+  background: linear-gradient(135deg, var(--accent-yellow), #ffed4e);
+  color: var(--dark-blue);
+}
+
+.listing-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.listing-card-link:hover {
+  color: var(--secondary-blue);
+  gap: 12px;
+}
+
+.listing-card-link i {
+  transition: transform 0.3s ease;
+}
+
+.listing-card-link:hover i {
+  transform: translateX(5px);
+}
+
+ 
+.listing-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+}
+
+.listing-empty-icon {
+  font-size: 5rem;
+  color: var(--primary-blue);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.listing-empty-state h3 {
+  color: var(--dark-blue);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.listing-empty-state p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.btn-listing-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(11, 179, 243, 0.3);
+}
+
+.btn-listing-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(11, 179, 243, 0.4);
+  color: white;
+}
+
+ 
+@media (max-width: 768px) {
+  .listing-page-title {
+    font-size: 2rem;
+  }
+
+  .listing-page-description {
+    font-size: 1.1rem;
+  }
+
+  .listing-header-icon {
+    font-size: 3rem;
+  }
+
+  .listing-intro-content {
+    padding: 25px;
+  }
 }
 </style>
 
